@@ -1,0 +1,595 @@
+body {
+    font-family: Bw Nista Grotesk DEMO, sans-serif;
+    margin: 0;
+}
+
+/* Nav */
+header {
+    position: sticky;
+}
+
+.Creatik-header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 15px 25px;
+    width: calc(100% - 50px);
+    border-bottom: solid black .5px;
+    position: fixed;
+    top: 0;
+    z-index: 1000; 
+}
+
+.header-logo {
+    padding-left: 20px;
+    max-width: 120px;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    text-align: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button {
+    background-color: #FDB618;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 25px;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.mobile-menu-icon {
+    display: none; 
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+
+
+
+/* dropdown menu */
+
+
+.nav-text .submenu {
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 10;
+    border-top: solid black 0.5px;
+}
+
+.nav-text:hover .submenu {
+    display: block;
+}
+
+.menu-item-list {
+    margin: 0;
+    padding-left: 0;
+}
+
+.menu-item-list li {
+    margin: 10px 0;
+}
+
+.menu-item-list li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 20px 0;
+}
+
+.menu-item-list li a:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+
+/* mobile view nav */
+
+
+@media only screen and (max-width: 768px) {
+    .header-logo {
+        padding-left: 10px; 
+        max-width: 100px; 
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        height: 30px;
+        width: 30px;
+        margin-left: auto;
+        margin-right: 10px; 
+    }
+
+    .mobile-menu-icon img {
+        max-width: 100%;
+    }
+
+    .mobile-menu {
+        display: none; 
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* Main */
+
+main {
+    padding: 30px 20px; 
+    flex: 1;
+}
+
+.Intro-flex {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.design_excellence {
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+span {
+color: #FDB618;
+}
+
+.flexbox-text {
+    width: 50%;
+    margin-right: 50px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    padding: 10px;
+}
+
+#bold-text {
+    font-weight: 600;
+}
+
+.flexbox-video {
+    margin-top: 100px;
+    width: 80%;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.Main-section-block {
+    background-color: #F5F5F5;
+    padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .Intro-flex {
+        flex-direction: column;
+    }
+
+    .design_excellence {
+        font-size: 24px;
+        margin-top:100px;
+    }
+
+    .flexbox-text  {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .flexbox-video {
+        margin-top: 20px;
+        width: 100%;
+        background-color: bisque;
+        background-image: url(https://images.squarespace-cdn.com/content/v1/59598b152994ca95c97da408/e7ec4f94-6494-40d8-b125-89ffbc592916/1+Creatik+SYD+FIFA+Signage.png?format=2500w);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+    }
+}
+
+/* About us and our team */
+
+
+h2 {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 30px;
+}
+
+.About-us-intro-p {
+    font-weight: bold;
+}
+
+.group-photo {
+    max-width: 100%;
+    margin: px;
+}
+
+.Team-intro-p {
+    width: 100%;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);;
+    gap: 50px;
+}
+
+
+.team-grid-container {
+    margin: 20px 20px; 
+}
+
+.team-image-1 {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 0;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center; 
+    transition: transform 0.3s ease;
+}
+
+.team-image-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+.team-image-1:hover::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.quote {
+    position: absolute;
+    padding: 20px 20px;
+    color: white;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.team-image-1:hover .quote {
+    opacity: 1; 
+}
+
+#KG {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/59598b152994ca95c97da408/1633049300188-4I8D8YZT05CBDHJ1N1DH/Kylie-Gould.png?format=2500w);
+}
+
+#DC {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/59598b152994ca95c97da408/1633049321189-566IQ72C4583PQ36ZCT4/Dan-Clark.png?format=1000w);
+}
+
+#AC {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/59598b152994ca95c97da408/342dc386-0798-4122-b7c7-ee5db015772c/AdelleChang.png?format=1000w);
+}
+
+#LT {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/59598b152994ca95c97da408/1633049654973-0DMTPUH3H4RNXNKS79MD/Louise-Thomas.png?format=1000w);
+}
+
+#JM {
+    background-image: url(Staff\ images/038A9936.jpg);
+}
+
+#AW {
+    background-image: url(Staff\ images/038A1579.jpg);
+}
+
+#PD {
+    background-image: url(Staff\ images/Pam_038A3849.jpg);
+}
+
+#TJ {
+    background-image: url(Staff\ images/038A0014.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+    .Main-section-block {
+        flex-direction: column; 
+    }
+
+    .team-grid {
+        gap: 10px; 
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+
+    .team-grid-container {
+        margin: 10px 0; 
+        width: 100%; 
+    }
+
+    .name {
+        white-space: normal;
+    }
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+
+.job-title {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.Our-work-intro-p {
+    margin-right: 35px;
+    font-weight: bold;
+}
+
+
+.work-learn-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+}
+
+.team-image-1:hover .work-learn-more {
+    opacity: 1; 
+}
+
+#Zurich {
+    background-image: url(Work/Zigsta+thumbnail.jpg);
+}
+
+#LD {
+    background-image: url(Work/Loves+Dogs_Branding_Thumbnail.png);
+}
+
+#SYD {
+    background-image: url(Work/Thumbnail.png);
+}
+
+#PMM {
+    background-image: url(Work/Thumbnail+.png);
+}
+
+/* footer */
+footer {
+    background-color: black;
+    height: 50px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-text {
+        color: white;
+        font-size: 12px;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Contact us */
+
+.Contact-us {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.Contact-us-p {
+    margin-left: 20px;
+    width: 60%;
+}
+
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    text-align: center;
+    margin-left: 40px;
+    margin-bottom: 100px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    justify-content: flex-start;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    display: inline-block;
+    float: right;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    max-width: 100px;
+    color: black;
+    background-color: #FDB618;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: black;
+}
+
+/* mobile view contact us */
+
+@media only screen and (max-width: 768px) {
+
+    .form-container {
+        width: fit-content;
+    }
+
+    .Contact-us-p {
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    form {
+        display: flex;
+    } 
+
+    input {
+        display: inline-block;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width:95%;
+        vertical-align: middle;
+    }
+}
+
+
+/* side menu */
+.side-menu-position {
+    padding-top: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.side-menu-design {
+    background-color: #FDB618;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.show-menu {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.side-menu-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 30px;
+}
+
+.side-menu-content {
+    color: black;
+    font-size: 14px;
+    margin: 100px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu-content li {
+    list-style: none;
+    margin-bottom: 15px; 
+}
+
+
+

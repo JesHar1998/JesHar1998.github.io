@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="Creatik-header" id="top-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="//images.squarespace-cdn.com/content/v1/59598b152994ca95c97da408/b72fb375-d3f0-4d2b-be5c-03f463255036/15+Year+logo+lockup-01.png?format=1500w"
+                    alt="Creatik" class="header-logo">
+            </a>
+        </div>
+        <div class="nav-wrapper">
+            <ul class="nav-text" id="nav-text">
+                <li id="menu-1-">About us
+                    <ul class="submenu">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our team</a></li>
+                        <li><a href="#">Our work</a></li>
+                    </ul>
+                </li>    
+                <li id="menu-1-">Work</li>
+                <li id="menu-1-">Clients</li>
+            </ul>
+            <button class="contact-button" onclick="window.location.href='contact_us.html'">
+                Get in touch
+            </button>
+            <div class="mobile-menu-icon" id="mobile-menu-icon">
+                <img src="1x/Hamburger_icon.png" alt="Hamburger icon">
+            </div>
+        </div>
+    </header>
+
+          <!--Side menu-->
+          <aside class="side-menu-position side-menu-design" id="side-menu">
+            <header class="side-menu-header">
+            </header>
+            <ul class="side-menu-content">
+              <li>About us</li>
+              <li>Our team</li>
+              <li>Our work</li>
+            </ul>
+          </aside>
+
+    <!-- mobile-menu -->
+    <aside class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-text">
+            <li id="menu-1-">About us</li>
+            <li id="menu-1-">Work</li>
+            <li id="menu-1-">Clients</li>
+        </ul>
+    </aside>
+
+    <main class="Contact-intro">
+        <h2 class="Contact-us">Get in Touch!</h2>
+        <p class="Contact-us-p">Creatik work collaboratively with companies of all sizes across all industries and we are always looking to establish relationships with new clients, get in touch to collaborate.</p>
+    </main>
+
+    <div class="form-container">
+        <form id="sampleForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <footer class="website-footer">
+        <p class="footer-text">© CREATIK DESIGN, SYDNEY, AUSTRALIA | PRIVACY POLICY</p>
+        <img class="footer-logo" src="https://images.squarespace-cdn.com/content/v1/59598b152994ca95c97da408/c01f81a1-6893-431c-bb06-a78a523bb876/Creatik_Logo_White-01.png?format=300w">
+    </footer>
+
+    <script src="contact-script.js"></script>
+</body>
+</html>
